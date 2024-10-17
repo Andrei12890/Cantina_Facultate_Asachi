@@ -1,0 +1,6 @@
+<h1>Meniul Zilei</h1>
+<ul>
+    {% for produs in produse %}
+        <li>{{ produs.denumire }} - {{ produs.cantitate }} - {{ produs.pret_studenti }} lei</li>
+    {% endfor %}
+</ul>
