@@ -1,0 +1,22 @@
+<!--cantina/templates/cantina/prima_pagina.html-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantina Universității Asachi</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Bine ați venit la Cantina Universității Asachi dragi studenți</h1>
+    <nav>
+<!--    Link către Prima pagină-->
+        <a href="{% url 'prima_pagina' %}">Prima pagină</a><br>
+<!--    Link către pagina de meniu-->
+        <a href="{% url 'meniu' %}">Meniu</a><br>
+<!--    Link către pagina de contact-->
+        <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+</body>
+</html>
