@@ -1,20 +1,79 @@
-<!-- cantina/templates/cantina/meniu_zilei.html -->
-{% load static %}
 <!DOCTYPE html>
 <html lang="ro">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meniul Zilei</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Meniul Zilei</h1>
-    <ul>
-        {% for produs in produse %}
-        <li>{{ produs.denumire }} - {{ produs.pret }} lei</li>
-        {% endfor %}
-    </ul>
+
+<div class="container text-center mt-5">
+
+    <h1 class="mb-4">Meniul Zilei</h1>
+    <p class="lead">Program cantină: Luni-Vineri 11:00 - 19:00</p>
+    <img src="{% static 'cantina/logocantina.jpg' %}" alt="Logo Cantina" class="img-fluid mb-4" style="max-width: 400px;">
+
+    <h2 class="mb-4">Meniul zilei</h2>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Denumire produs</th>
+                <th>Cantitate</th>
+                <th>Preț studenți</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ciorbă rădăuțeană</td>
+                <td>400 gr.</td>
+                <td>3.5 lei</td>
+            </tr>
+            <tr>
+                <td>Ciorbă de perișoare</td>
+                <td>400 gr.</td>
+                <td>5.19 lei</td>
+            </tr>
+            <tr>
+                <td>Cașcaval pane</td>
+                <td>150 gr.</td>
+                <td>4.55 lei</td>
+            </tr>
+            <tr>
+                <td>Chiftele cu carne și sos</td>
+                <td>100/50 gr.</td>
+                <td>6.5 lei</td>
+            </tr>
+            <tr>
+                <td>Grătar din piept de pui</td>
+                <td>150 gr.</td>
+                <td>8 lei</td>
+            </tr>
+            <tr>
+                <td>Mici cu muștar</td>
+                <td>1 buc.</td>
+                <td>2 lei</td>
+            </tr>
+            <tr>
+                <td>Tochitură moldovenească</td>
+                <td>150/200/50/50 gr.</td>
+                <td>10 lei</td>
+            </tr>
+            <tr>
+                <td>Pâine felie</td>
+                <td>1 felie</td>
+                <td>0.25 lei</td>
+            </tr>
+            <tr>
+                <td>Mămăligă</td>
+                <td>200 gr.</td>
+                <td>0.25 lei</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
     <a href="{% url 'prima_pagina' %}">Înapoi la Prima Pagină</a>
 </body>
 </html>

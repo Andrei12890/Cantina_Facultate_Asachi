@@ -1,5 +1,3 @@
-<!-- cantina/templates/cantina/contact.html -->
-{% load static %}
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -9,11 +7,24 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Contact</h1>
+    <h1>Contactează-ne</h1>
     <p>Aici ne poți contacta:</p>
     <p>Telefon/Fax: 0232555666</p>
     <p>Email: cantinaasachi@universitate.ro</p>
     <p>Program: Luni-Vineri 07:30 - 15:30</p>
+
+    <form action="/send-email/" method="post">
+        <label for="name">Nume:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="message">Mesaj:</label>
+        <textarea id="message" name="message"></textarea>
+
+        <button type="submit">Trimite</button>
+    </form>
     <a href="{% url 'prima_pagina' %}">Înapoi la Prima Pagină</a>
 </body>
 </html>

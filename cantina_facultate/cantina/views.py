@@ -8,7 +8,7 @@ def prima_pagina(request):
 
 def meniu(request):
     produse = [
-        {'denumire': 'Ciorba rădăuțeană', 'pret': 3.5},
+        {'denumire': 'Ciorba rădăuțeană','pret': 3.5},
         {'denumire': 'Ciorbă de perișoare', 'pret': 5.19},
         {'denumire': 'Cascaval pane', 'pret': 4.55},
         {'denumire': 'Chiftele cu carne și sos', 'pret': 6.5},
