@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Contactează-ne</h1>
-    <p>Aici ne poți contacta:</p>
-    <p>Telefon/Fax: 0232555666</p>
-    <p>Email: cantinaasachi@universitate.ro</p>
-    <p>Program: Luni-Vineri 07:30 - 15:30</p>
+
+<div class="container mt-5">
+
+    <h1 class="text-center font-weight-bold mb-4">Contactează-ne</h1>
+
+    <p class="text-center font-weight-bold">Aici ne poți contacta:</p>
+    <ul class="list-unstyled text-center">
+        <li><strong>Telefon/Fax:</strong> 0232555666</li>
+        <li><strong>Email:</strong> cantinaasachi@universitate.ro</li>
+        <li><strong>Program:</strong> Luni-Vineri 07:30 - 15:30</li>
+    </ul>
 
     <form action="/send-email/" method="post">
         <label for="name">Nume:</label>
@@ -25,6 +31,8 @@
 
         <button type="submit">Trimite</button>
     </form>
-    <a href="{% url 'prima_pagina' %}">Înapoi la Prima Pagină</a>
+    <a href="{% url 'prima_pagina' %}" class="btn btn-primary">Înapoi la Prima Pagină</a>
+
+</div>
 </body>
 </html>
