@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cantina Universității Asachi</title>
+    <title>Prima Pagină - Cantina Universității Asachi</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Bine ați venit la Cantina Universității Asachi, dragi studenți!</h1>
-    <nav>
-        <ul>
-            <li><a href="/">Prima pagină</a></li>
-            <li><a href="/meniu/">Meniu</a></li>
-            <li><a href="/contact/">Contact</a></li>
-        </ul>
-    </nav>
-    <h2>Noutăți</h2>
-    <p>Aici vor apărea noutăți despre cantină.</p>
+<div class="container main-content text-center">
+
+    <img src="{% static 'cantina/logoprimapagina.jpg' %}" alt="Logo Cantina" class="img-fluid mb-4" style="max-width: 400px;">
+
+    <h1 class="display-4 font-weight-bold">Bine ați venit la Cantina Universității Asachi</h1>
+    <p class="lead intro-text mt-4">Dragi studenți, vă aștemtăm cu drag la cantina noastra! Oferim mese delicioase pentru toate gusturile.</p>
+
+    <div class="mt-5">
+        <a href="{% url 'prima_pagina' %}" class="btn btn-outline-primary btn-lg mx-2">Prima pagină</a>
+        <a href="{% url 'meniu' %}" class="btn btn-outline-success btn-lg mx-2">Meniu</a>
+        <a href="{% url 'contact' %}" class="btn btn-outline-info btn-lg mx-2">Contact</a>
+    </div>
+
+    <div class="mt-5">
+        <img src="{% static 'cantina/logocantina.jpg' %}" alt="Facultatea Universității Asachi" class="img-fluid" style="max-width: 30%; height: auto;">
+    </div>
+
+    <div class="mt-5">
+        <h2 class="font-weight-bold">Noutăți</h2>
+        <p class="lead intro-text mt-4">Urmăriți pagina noastră pentru cele mai recente informații despre cantină si meniul zilei.</p>
+    </div>
+
+
+</div>
 </body>
 </html>

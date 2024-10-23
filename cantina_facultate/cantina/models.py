@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Produs(models.Model):
+    objects = None
     denumire = models.CharField(max_length=100)
     cantitate = models.CharField(max_length=50)
     pret_studenti = models.DecimalField(max_digits=5, decimal_places=2)
